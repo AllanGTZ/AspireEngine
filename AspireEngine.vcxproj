@@ -158,6 +158,7 @@
     <ClInclude Include="include\targetver.h" />
     <ClInclude Include="include\DisplayManager.h" />
     <ClInclude Include="include\DisplayEventObserver.h" />
+    <ClInclude Include="TimeManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\AspireEngine.cpp" />
@@ -166,6 +167,7 @@
     <ClCompile Include="source\DisplayManager.cpp" />
     <ClCompile Include="source\DisplayEventObserver.cpp" />
     <ClCompile Include="source\stdafx.cpp" />
+    <ClCompile Include="TimeManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="AspireEngine.rc" />

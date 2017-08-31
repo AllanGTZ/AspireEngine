@@ -29,14 +29,29 @@ bool GameHandler::Initialize() {
 		return false;
 	}
 
+	time = TimeManager::GetInstance();
+
+	FPS = 60;
+	frameTime = 1.0 / 60.0;
+	previousTime = 0.0;
+
 	return true;
 }
 
 void GameHandler::Run() {
-	while (!Display.WindowShouldClose()) {
-		Input.Update();
-		Display.Render();
+	time->StartGameTime();
+
+ 	while (!Display.WindowShouldClose()) {
+		time->Update();
+
+		if (time->FrameHasPassed()) {
+			Input.Update();
+
+			Display.Render();
+		}
 	}
+	 
+	time->Terminate();
 }
 
 void GameHandler::Terminate() {

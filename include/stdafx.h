@@ -20,6 +20,7 @@
 #include <vector>
 #include <set>
 #include <map>
+#include <thread>
 
 // OpenGL Header Files
 #include <glm\glm.hpp>
